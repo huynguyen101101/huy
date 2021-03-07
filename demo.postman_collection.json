@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "b137c28f-ebdb-4c3a-8bae-b1b218af3557",
+		"name": "demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/student/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ClassID",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/student/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"student",
+						"1"
+					]
+				},
+				"description": "update class student"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/teacher/1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "StudentID",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "StudentName",
+							"value": "yen",
+							"type": "text"
+						},
+						{
+							"key": "ClassID",
+							"value": "0",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/teacher/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"teacher",
+						"1"
+					],
+					"query": [
+						{
+							"key": "lỗi kìa, sửa lỗi kia là dc",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "get student in class teacher"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/classroom",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "ClassID",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "ClassName",
+							"value": "A3",
+							"type": "text"
+						},
+						{
+							"key": "TeacherID",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/classroom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"classroom"
+					]
+				},
+				"description": "create new class"
+			},
+			"response": []
+		}
+	]
+}
